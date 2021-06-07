@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WlAf1wZld8HxbwiJqHF2quBkNcZSzd8BlCixL0X53iXIjo6B8KOuMbQICfWPznJX1mwfDTTMhzE5aTOmrFQG0w==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Group3.NETProject\\Loot_Lo_Ecommerce\\Loot_Lo_Client\\Loot_Lo_Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deves\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

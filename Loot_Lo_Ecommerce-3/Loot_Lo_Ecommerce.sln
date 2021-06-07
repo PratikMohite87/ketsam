@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loot_Lo_API", "Loot_Lo_API\Loot_Lo_API.csproj", "{1D51C4E3-3863-4BB4-BE62-34CEFA733B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loot_Lo_Client", "Loot_Lo_Client\Loot_Lo_Client.csproj", "{AEED1479-9536-41F0-8366-9C737A6425D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D51C4E3-3863-4BB4-BE62-34CEFA733B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D51C4E3-3863-4BB4-BE62-34CEFA733B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D51C4E3-3863-4BB4-BE62-34CEFA733B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D51C4E3-3863-4BB4-BE62-34CEFA733B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEED1479-9536-41F0-8366-9C737A6425D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEED1479-9536-41F0-8366-9C737A6425D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEED1479-9536-41F0-8366-9C737A6425D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEED1479-9536-41F0-8366-9C737A6425D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0870DC7-BF8B-4CDC-BD9C-83506C21EF20}
+	EndGlobalSection
+EndGlobal

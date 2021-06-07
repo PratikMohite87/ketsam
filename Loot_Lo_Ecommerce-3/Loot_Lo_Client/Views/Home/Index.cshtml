@@ -1,0 +1,17 @@
+﻿@using Loot_Lo_Client.Helper
+
+@{
+
+    if (SessionHelper.GetObjectFromJson<Customer>(Context.Session, "customer") != null)
+    {
+        ViewData["Title"] = SessionHelper.GetObjectFromJson<Customer>(Context.Session, "customer").CustomerName;
+    }
+    else
+        ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>@ViewData["Title"]</h2>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

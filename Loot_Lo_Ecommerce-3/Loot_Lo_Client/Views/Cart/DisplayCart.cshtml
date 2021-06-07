@@ -1,0 +1,12 @@
+﻿@using Loot_Lo_Client.Helper
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach (var i in SessionHelper.GetObjectFromJson<List<int>>(Context.Session, "Cart"))
+{
+    <h6>@i</h6>
+}
