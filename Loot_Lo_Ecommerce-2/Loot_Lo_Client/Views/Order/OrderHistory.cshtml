@@ -1,0 +1,56 @@
+﻿@model IList<Loot_Lo_Client.Models.CustomerOrderDetails>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Your Orders</h2>
+
+@*@foreach (var item in Model)
+{
+    foreach (var item2 in item.OrderedProductQuantity)
+    {
+        <div class="card">
+            <div class="card-header">
+                <b class="text-primary">@item2.Product.ProductName</b>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">Total Price: @item.TotalPrice</h5>
+                        <p class="card-text">Total Items: @item2.Quantity</p>
+                        <h6><b class="text-danger">DELIVERED</b></h6>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <img src="~/Images/@item2.Product.ImagePath" width="100" height="100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}*@
+
+@foreach (var item in Model)
+{
+    <div class="card mt-3">
+        <div class="card-header">
+            <b class="text-dark">Total Cost: @item.TotalPrice</b>
+        </div>
+        @foreach (var item2 in item.OrderedProductQuantity)
+        {
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title text-primary"><b>@item2.Product.ProductName</b></h5>
+                        <p class="card-text">Total Items: @item2.Quantity</p>
+                        <h6><b class="text-danger">DELIVERED</b></h6>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                         <img src="~/Images/@item2.Product.ImagePath" width="100" height="100" />
+                    </div>
+                </div>
+            </div>
+         }
+</div>
+}

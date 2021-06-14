@@ -1,0 +1,28 @@
+﻿@model Loot_Lo_Client.Models.Customer
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="card">
+    <h5 class="card-header"><b>Account Deactivation.</b></h5>
+    <div class="card-body">
+        <h5 class="card-title">Hello, @Model.CustomerName .</h5>
+        <h6 class="card-title">@Model.CustomerEmail</h6>
+        <p class="card-text"><b>Are you sure you want to deactivate your account ?</b></p>
+        <div class="row">
+            <div class="col d-flex justify-content-around align-items-center">
+                <a asp-action="DeactivateAccount" class="btn btn-danger">Deactivate Account</a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-success">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card-header {
+        background-color: rgb(255, 86, 86)
+    }
+</style>

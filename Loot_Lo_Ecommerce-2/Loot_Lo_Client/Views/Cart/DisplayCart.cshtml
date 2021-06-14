@@ -1,0 +1,75 @@
+﻿@using Loot_Lo_Client.Helper
+@model IList<Loot_Lo_Client.Models.Cart>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Your Cart</h1>
+
+<div class="row">
+    <div class="col-12">
+        <form asp-action="ConfirmOrder" asp-controller="Order" method="post">
+            <table class="table table-striped">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Quantity</th>
+                </tr>
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <tr>
+                        <td>@Model[i].Product.ProductName</td>
+                        <td>@Model[i].Product.Price</td>
+                        <td>
+                            <input value="@Model[i].Product.Price" asp-for="@Model[i].Product.Price" type="hidden" />
+                            <input value="@Model[i].ProductId" asp-for="@Model[i].ProductId" type="hidden" />
+                            <input value="@Model[i].Quantity" asp-for="@Model[i].Quantity" />
+                        </td>
+                        <td>
+                            @*<a asp-action="RemoveCartItem" asp-route-id="@Model[i].CartId">Remove Item</a>*@
+                            @Html.ActionLink("Remove Item", "RemoveCartItem", new { cartId = @Model[i].CartId }, new { @class = "text text-danger" })
+                        </td>
+                    </tr>
+                }
+            </table>
+            <br />
+            <h6>Total Amount: @ViewBag.totalAmount</h6>
+            <input type="submit" value="Place Order" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+@*<table class="table table-striped">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Quantity</th>
+    </tr>
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        <tr>
+            <td>@Model[i].Product.ProductName</td>
+            <td>@Model[i].Product.Price</td>
+            <td>
+                <input value="@Model[i].Product.Price" asp-for="@Model[i].Product.Price" type="hidden" />
+                <input value="@Model[i].ProductId" asp-for="@Model[i].ProductId" type="hidden" />
+                <input value="@Model[i].Quantity" asp-for="@Model[i].Quantity" />
+            </td>
+            <td>
+                <a asp-action="RemoveCartItem" asp-route-id="@Model[i].CartId">Remove Item</a>
+            </td>
+        </tr>
+    }
+</table>*@
+
+<div class="row mt-2">
+    <div class="col-12">
+        <a asp-action="ClearCart" class="btn btn-warning">Clear Cart</a>
+    </div>
+</div>
+
+
+<h6>@ViewBag.Message</h6>

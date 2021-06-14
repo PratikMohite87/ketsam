@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dbMvRuR/0pfQ4U8z8pnR4OeqQm4RkHt7JMTX2Fqu3El6ezF3verQHDtT5E+UYH7uigaIaEzovK5RXCKed9oCDA==",
+  "success": true,
+  "projectFilePath": "C:\\Project\\MastekProject\\Loot_Lo_Ecommerce-2\\Loot_Lo_Client\\Loot_Lo_Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deves\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
